@@ -1,0 +1,541 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
+@font-face{
+    src: url(fonts/bpg_nino_mtavruli_bold.ttf);
+    font-family: font_bold;
+}
+
+@font-face{
+    src: url(fonts/bpg_nino_mtavruli_normal.ttf);
+    font-family: font_normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: font_normal;
+    scroll-behavior: smooth;
+    
+}
+body{
+    background-color: rgba(20, 218, 218, 0.363);
+    background-size: cover;
+}
+p{
+    font-weight: 300;
+    color: #111;
+}
+h1,h2,h3,h4,h5{
+    font-family:font_bold;
+}
+section{
+    padding: 100px;
+}
+
+/* ბანერის და ჰედერის საერთო სექცია     */
+/* ბანერი */
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: url(images/img1.jpg);
+    background-size: cover;
+}
+.banner .content{
+    max-width: 900px;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 55px;
+    font-weight: 900;
+    color: white;
+    word-spacing: 10px;
+}
+.banner .content p{
+    font-size: 25px;
+    color: white;
+    word-spacing: 3px;
+}
+.button{
+font-size: 25px;
+color: white;
+background-color: #457ce0;
+display: inline-block;
+padding: 10px 30px;
+border-radius: 5px;
+text-decoration: none;
+margin-top: 20px;
+text-transform: uppercase;
+letter-spacing: 3px;
+-webkit-transition: 0.4s;
+-o-transition: 0.4s;
+transition: 0.4s;
+}
+.button:hover{
+   letter-spacing: 8px;
+}
+/* ჰედერი */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+header.sticky{
+    background-color:rgb(238, 238, 238);
+    padding: 10px 100px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+header .logo{
+    font-weight:900;
+    font-size: 40px;
+    color:rgb(69, 82, 158);
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+header .navigation{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+header .navigation li{
+    list-style: none;
+    margin-left:30px ;
+}
+header .navigation li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+}
+header.sticky .navigation li a{
+    color: black
+}
+header .navigation li a:hover{
+    color: rgb(223, 30, 46);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+/* სექცია ჩვენს შესახებ */
+.row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+.row .col50{
+position: relative;
+width: 48%;
+}
+.row .col50 h2{
+    font-size: 70px;
+    color:black;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.row .col50 p{
+    color:black;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+.row .col50 .imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+.row .col50 .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+@media(max-width: 1200px){
+    .contact{
+        padding: 50px;
+    }
+    .row{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%;
+    }
+    .row .col50{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+}
+/* კონტაქი */
+.contact{
+    position: relative;
+    min-height:100vh;
+    padding: 50px 100px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 70px;
+}
+.contact .content p{
+    font-size: 30px;
+    font-weight: 300;
+}
+.container{
+    width: 100%;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 0;
+    
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height:60px;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    color: black;
+    font-size: 15px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.container .contactInfo .box .icon :hover{
+    color: rgb(23, 167, 211);
+    font-size: 25px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.container .contactInfo .box .text{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 20px;
+    font-size: 18px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: black;
+    margin-top: 10px;
+    font-weight: 300;
+}
+.container .contactInfo .box .text a{
+    text-decoration: none;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 900;
+    color:rgb(23, 167, 211) ;
+    letter-spacing: 1px;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+}
+.contactForm .send{
+    text-align: center;
+}
+.contactForm h2{
+    font-size: 30px;
+    color:rgb(23, 167, 211);
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0;
+    border:none;
+    border-bottom: 2px solid black;
+    outline: none;
+    resize: none;
+
+}
+.contactForm .inputBox [value="გაგზავნა"]{
+    background: rgb(23, 167, 211);
+    color: white;
+    border: none;
+    padding-top: 10px;
+    letter-spacing: 3px;
+    font-weight: 900;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.contactForm .inputBox [value="გაგზავნა"]:hover{
+    background-color: rgb(28, 134, 148);
+    letter-spacing: 10px;
+}
+@media(max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .container .contactForm{
+        width: 100%;
+    }
+    .contact .content h2{
+        font-size: 50px;
+        margin-left: 10px;
+    }
+    section{
+        padding: 20px;
+    }
+    .quick-links ul{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 100px
+    }
+}
+
+/* ფუტერის სექცია */
+.inner-footer{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(128, 128, 128, 0.377);
+}
+.outer-footer{
+    background-color: rgba(128, 128, 128, 0.808);
+    width: 100%;
+    height: 30px;
+    padding-top: 6px;
+    text-align: center;
+}
+.outer-footer p{
+    font-weight: 600;
+}
+.social-links{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex; 
+   -webkit-transition: 0.5s; 
+   -o-transition: 0.5s; 
+   transition: 0.5s;
+}
+.social-links ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+    margin: auto;
+}
+.social-links ul li{
+    margin:30px ;
+    
+    list-style:none;
+}
+.social-links ul li a{
+    color: gray;
+    font-size: 40px;
+}
+.social-links ul li a:hover{
+    color:  rgb(28, 134, 148);
+    font-size: 45px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+@media(max-width:991px){
+header, header.sticky
+   {
+    padding: 10px 20px;
+}
+header .navigation{
+    display: none;
+}
+header .navigation.active{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 68px;
+    left:0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgb(16, 171, 233);
+    padding-left: 10px;
+}
+header .navigation li{
+    margin-left: 0;
+}
+header .navigation li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.menuToggle{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background:url(images/download\ \(1\).png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.menuToggle.active{
+    background:url(images/download\ \(2\).png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+header.sticky .menuToggle{
+    -webkit-filter: invert(1);
+            filter: invert(1);
+}
+section{
+    padding: 50px;
+}
+/* header .navigation.passive{
+    display: none;
+
+} */
+}
